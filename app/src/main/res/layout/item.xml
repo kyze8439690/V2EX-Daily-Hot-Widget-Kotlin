@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/root"
+                android:padding="16dp">
+    
+    <ImageView
+        android:id="@+id/head_icon"
+        android:layout_width="33.3dp"
+        android:layout_height="33.3dp"
+        android:src="@color/pressed"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Livid"
+        android:layout_toRightOf="@id/head_icon"
+        android:layout_marginLeft="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="在上海的百姓网总部拜访老朋友，用上了这次回国用到的最好的网络"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/name"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textColor="@color/rolling_stone"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1 hour ago"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/name"
+        android:textSize="13.3sp"
+        android:textColor="@color/rolling_stone"
+        />
+
+</RelativeLayout>

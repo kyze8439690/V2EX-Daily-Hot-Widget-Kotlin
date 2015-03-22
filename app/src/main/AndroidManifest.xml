@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="me.github.yugy.v2exwidget">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:icon="@drawable/ic_launcher"
+            >
+
+        <service android:name=".NetworkService" />
+        <service android:name=".AdapterService"
+                 android:exported="false"
+                 android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <receiver android:name=".WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                       android:resource="@xml/appwidget_info" />
+        </receiver>
+    </application>
+
+</manifest>
