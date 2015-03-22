@@ -38,7 +38,7 @@ public class WidgetProvider : AppWidgetProvider() {
         } else if (intent.getAction() == ACTION_CLICK) {
             println("handle click")
             val url = intent.getStringExtra("url")
-            val viewIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            val viewIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url.replace("http://", "https://")))
             viewIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             if (context.getPackageManager().queryIntentActivities(viewIntent, 0).size() != 0) {
                 context.startActivity(viewIntent)
